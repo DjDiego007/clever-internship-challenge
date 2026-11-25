@@ -19,7 +19,7 @@ python main.py              # muestra los ejemplos del reto con OK / FALLO
 python -m unittest -v       # corre todas las pruebas automáticas
 ```
 
-Solo se necesita Python 3.8 o superior.
+Probado con python 3.12.
 
 ## Explicación de cada solución (versión corta)
 
