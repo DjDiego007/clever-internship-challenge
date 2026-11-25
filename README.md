@@ -1,7 +1,5 @@
 # Clever Internship – Desafío inicial
 
-# Clever Internship – Desafío inicial
-
 ![Tests](https://github.com/DjDiego007/clever-internship-challenge/actions/workflows/tests.yml/badge.svg)
 
 Solución de los 3 ejercicios del desafío técnico, escrita en **Python 3** sin librerías externas.
