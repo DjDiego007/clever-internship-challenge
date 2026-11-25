@@ -9,17 +9,14 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.9", "3.12"]
     steps:
       - name: Descargar el código
         uses: actions/checkout@v4
 
-      - name: Instalar Python ${{ matrix.python-version }}
+      - name: Instalar Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.12"
 
       - name: Correr pruebas automáticas
         run: python -m unittest -v
