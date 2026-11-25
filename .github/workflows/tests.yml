@@ -1,0 +1,28 @@
+name: Tests
+
+# Corre las pruebas cada vez que subo cambios a GitHub
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.12"]
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Correr pruebas automáticas
+        run: python -m unittest -v
+
+      - name: Correr los ejemplos del reto
+        run: python main.py
